@@ -17,6 +17,7 @@ return new class extends Migration
             $table->foreign('alumno')->references('id')->on('alumnos');
             $table->unsignedBigInteger('asignatura');
             $table->foreign('asignatura')->references('id')->on('asignaturas');
+            $table->tinyInteger('calificacion');
             $table->timestamps();
         });
     }
