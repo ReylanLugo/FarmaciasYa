@@ -19,8 +19,8 @@ class CalificacionFactory extends Factory
     public function definition(): array
     {
         return [
-            "alumno" => Alumno::factory(),
-            "asignatura"=> Asignatura::factory(),
+            "alumno_id" => Alumno::factory(),
+            "asignatura_id"=> Asignatura::factory(),
             "calificacion" => $this->faker->numberBetween(0, 20),
         ];
     }

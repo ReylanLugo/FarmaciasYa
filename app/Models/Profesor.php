@@ -16,7 +16,11 @@ class Profesor extends Model
         'nombre',
         'apellido',
         'cedula',
-        'asignatura',
+        'asignatura_id',
     ];
 
+    public function asignatura()
+    {
+        return $this->belongsTo(Asignatura::class, 'asignatura_id');
+    }
 }

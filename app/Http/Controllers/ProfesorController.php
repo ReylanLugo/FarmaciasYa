@@ -17,7 +17,7 @@ class ProfesorController extends Controller
     public function getById($id)
     {
         try {
-            $profesor = Profesor::findOrFail($id);
+            $profesor = Profesor::with("asignatura")->findOrFail($id);
             return response()->json(['success' => true, 'profesor' => $profesor], 200);
         } catch (\Exception $e) {
             return response()->json(["success" => false, "message" => 'No se encuentra ningun profesor registrado con ese id', "error" => $e->getMessage()], 404);

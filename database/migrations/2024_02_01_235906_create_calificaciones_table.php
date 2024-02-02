@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('calificaciones', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('alumno');
-            $table->foreign('alumno')->references('id')->on('alumnos');
-            $table->unsignedBigInteger('asignatura');
-            $table->foreign('asignatura')->references('id')->on('asignaturas');
+            $table->unsignedBigInteger('alumno_id');
+            $table->foreign('alumno_id')->references('id')->on('alumnos');
+            $table->unsignedBigInteger('asignatura_id');
+            $table->foreign('asignatura_id')->references('id')->on('asignaturas');
             $table->tinyInteger('calificacion');
             $table->timestamps();
         });

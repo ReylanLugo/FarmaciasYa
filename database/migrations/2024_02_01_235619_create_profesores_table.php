@@ -16,8 +16,8 @@ return new class extends Migration
             $table->string('nombre', 50);
             $table->string('apellido',50);
             $table->string('cedula',10);
-            $table->unsignedBigInteger('asignatura');
-            $table->foreign('asignatura')->references('id')->on('asignaturas');
+            $table->unsignedBigInteger('asignatura_id');
+            $table->foreign('asignatura_id')->references('id')->on('asignaturas');
             $table->timestamps();
         });
     }

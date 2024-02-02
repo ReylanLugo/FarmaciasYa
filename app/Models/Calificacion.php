@@ -13,16 +13,16 @@ class Calificacion extends Model
     protected $table = 'calificaciones';
 
     protected $fillable = [
-        'alumno',
-        'asignatura',
+        'alumno_id',
+        'asignatura_id',
         'calificacion',
     ];
 
     public function alumno() {
-        return $this->belongsTo('App\Models\Alumno', 'alumno','id');
+        return $this->belongsTo('App\Models\Alumno', 'alumno_id');
     }
 
     public function asignatura() {
-        return $this->belongsTo('App\Models\Asignatura','asignatura','id');
+        return $this->belongsTo('App\Models\Asignatura','asignatura_id');
     }
 }

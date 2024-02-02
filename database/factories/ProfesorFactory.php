@@ -21,7 +21,7 @@ class ProfesorFactory extends Factory
             'nombre' => $this->faker->firstName,
             'apellido' => $this->faker->lastName,
             'cedula' => $this->faker->unique()->numerify('V#########'),
-            'asignatura' => Asignatura::factory(),
+            'asignatura_id' => Asignatura::factory(),
         ];
     }
 }
